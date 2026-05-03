@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DG Equipment Repair & Services — Mobile equipment repair serving Nassau County, NY. We come to you.">
+<title>DG Equipment Repair & Services | Oceanside, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Stardos+Stencil:wght@400;700&family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--red:#B50016;--black:#0c0c0c;--dark:#111;--steel:#181818;--border:#242424;--grey-mid:#5a5a5a;--grey-light:#a0a0a0;--white:#efefef;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--white);font-family:'Source Sans 3',sans-serif;overflow-x:hidden;line-height:1.6;}
+nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(12,12,12,0.98);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem;height:58px;gap:1rem;}
+.nav-left{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
+.nav-left img{height:36px;width:36px;object-fit:contain;flex-shrink:0;}
+.nav-brand{font-family:'Oswald',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;color:var(--white);line-height:1.2;white-space:nowrap;}
+.nav-links{display:flex;list-style:none;margin-left:auto;}
+.nav-links a{font-family:'Oswald',sans-serif;font-weight:500;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-light);text-decoration:none;padding:0 0.9rem;line-height:58px;border-left:1px solid var(--border);transition:color .2s;white-space:nowrap;}
+.nav-links a:last-child{border-right:1px solid var(--border);}
+.nav-links a:hover{color:var(--white);}
+.nav-call{flex-shrink:0;font-family:'Oswald',sans-serif;font-weight:600;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;background:var(--red);color:#fff;padding:8px 16px;text-decoration:none;transition:opacity .2s;white-space:nowrap;}
+.nav-call:hover{opacity:.85;}
+.hero{min-height:100vh;background:#0c0c0c;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:90px 1.5rem 60px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 49px,rgba(255,255,255,0.016) 49px,rgba(255,255,255,0.016) 50px),repeating-linear-gradient(90deg,transparent,transparent 49px,rgba(255,255,255,0.016) 49px,rgba(255,255,255,0.016) 50px);pointer-events:none;}
+.hero-location{font-family:'Oswald',sans-serif;font-size:0.65rem;font-weight:500;letter-spacing:0.3em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:1.75rem;}
+.hero-logo{width:120px;height:120px;object-fit:contain;margin-bottom:1.5rem;}
+.hero h1{font-family:'Stardos Stencil',sans-serif;font-weight:700;font-size:clamp(3rem,9vw,6.5rem);line-height:0.9;text-transform:uppercase;color:var(--white);margin-bottom:1rem;}
+.hero h1 .accent{display:block;-webkit-text-stroke:1.5px var(--red);color:transparent;}
+.hero-sub{font-size:1rem;color:var(--grey-light);max-width:420px;margin:0 auto 2.25rem;line-height:1.7;}
+.hero-btns{display:flex;gap:0.75rem;flex-wrap:wrap;justify-content:center;}
+.btn-red{background:var(--red);color:#fff;font-family:'Oswald',sans-serif;font-weight:600;font-size:0.9rem;letter-spacing:0.12em;text-transform:uppercase;padding:12px 26px;text-decoration:none;border:none;cursor:pointer;transition:opacity .2s;display:inline-block;}
+.btn-red:hover{opacity:.85;}
+.btn-ghost{background:transparent;color:var(--white);font-family:'Oswald',sans-serif;font-weight:500;font-size:0.9rem;letter-spacing:0.12em;text-transform:uppercase;padding:11px 26px;text-decoration:none;border:1px solid var(--border);transition:border-color .2s;display:inline-block;}
+.btn-ghost:hover{border-color:var(--grey-mid);}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--steel);}
+.stat{padding:1.5rem 0.75rem;text-align:center;border-right:1px solid var(--border);}
+.stat:last-child{border-right:none;}
+.stat-n{font-family:'Stardos Stencil',sans-serif;font-weight:700;font-size:2.2rem;color:var(--white);line-height:1;}
+.stat-n span{color:var(--red);}
+.stat-l{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--grey-mid);margin-top:4px;font-family:'Oswald',sans-serif;}
+.pg-main{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:320px 320px;gap:4px;}
+.pg-main img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.9);transition:filter .3s;}
+.pg-main img:hover{filter:brightness(1);}
+.pg-main .tall{grid-row:span 2;}
+.pg-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;}
+.pg-row img{width:100%;height:280px;object-fit:cover;display:block;filter:brightness(.9);transition:filter .3s;}
+.pg-row img:hover{filter:brightness(1);}
+.svc-wrap{background:var(--dark);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.wrap{max-width:1080px;margin:0 auto;padding:4.5rem 1.5rem;}
+.eyebrow{font-family:'Oswald',sans-serif;font-size:0.63rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:var(--red);margin-bottom:.5rem;display:block;}
+.sec-title{font-family:'Stardos Stencil',sans-serif;font-weight:700;font-size:clamp(1.8rem,4vw,2.6rem);text-transform:uppercase;line-height:1;margin-bottom:2.25rem;padding-bottom:1.1rem;border-bottom:1px solid var(--border);}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);}
+.svc-card{padding:2rem 1.6rem;border-right:1px solid var(--border);position:relative;}
+.svc-card:last-child{border-right:none;}
+.svc-card::before{content:'';position:absolute;top:0;left:0;width:0;height:2px;background:var(--red);transition:width .3s;}
+.svc-card:hover::before{width:100%;}
+.svc-name{font-family:'Stardos Stencil',sans-serif;font-weight:700;font-size:1.1rem;text-transform:uppercase;margin-bottom:1rem;color:var(--white);line-height:1.2;}
+.svc-list{list-style:none;}
+.svc-list li{font-size:0.875rem;color:var(--grey-light);padding:4px 0 4px 12px;position:relative;border-bottom:1px solid rgba(255,255,255,0.04);}
+.svc-list li:last-child{border-bottom:none;}
+.svc-list li::before{content:'';position:absolute;left:0;top:12px;width:5px;height:1px;background:var(--red);}
+.maint-callout{background:var(--dark);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:3rem 1.5rem;text-align:center;}
+.maint-callout h2{font-family:'Stardos Stencil',sans-serif;font-weight:700;font-size:clamp(1.5rem,3vw,2.2rem);text-transform:uppercase;color:var(--white);margin-bottom:.75rem;line-height:1.1;}
+.maint-callout p{font-size:0.97rem;color:var(--grey-light);max-width:560px;margin:0 auto 1.75rem;line-height:1.75;}
+.btn-light{background:var(--white);color:var(--black);font-family:'Oswald',sans-serif;font-weight:700;font-size:0.9rem;letter-spacing:0.12em;text-transform:uppercase;padding:12px 28px;text-decoration:none;display:inline-block;transition:opacity .2s;}
+.btn-light:hover{opacity:.85;}
+.emergency{background:var(--red);padding:2.5rem 1.5rem;text-align:center;}
+.emergency h3{font-family:'Stardos Stencil',sans-serif;font-weight:700;font-size:1.6rem;text-transform:uppercase;color:#fff;margin-bottom:.4rem;}
+.emergency p{color:rgba(255,255,255,.8);margin-bottom:1.1rem;font-size:0.95rem;}
+.btn-white{background:#fff;color:var(--red);font-family:'Oswald',sans-serif;font-weight:700;font-size:0.9rem;letter-spacing:0.12em;text-transform:uppercase;padding:12px 28px;text-decoration:none;display:inline-block;transition:opacity .2s;}
+.btn-white:hover{opacity:.9;}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start;}
+.about-img img{width:100%;display:block;}
+.about-text p{color:var(--grey-light);line-height:1.8;margin-bottom:1rem;font-size:0.98rem;}
+.about-text p strong{color:var(--white);font-weight:600;}
+.about-byline{font-family:'Oswald',sans-serif;font-size:0.85rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:2rem;}
+.about-byline span{color:var(--grey-light);}
+.about-creds{margin-top:1.75rem;padding-top:1.5rem;border-top:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.cred{padding:1rem;background:var(--steel);border-left:2px solid var(--red);}
+.cred-n{font-family:'Stardos Stencil',sans-serif;font-weight:700;font-size:1.35rem;color:var(--white);line-height:1;margin-bottom:3px;}
+.cred-l{font-size:0.76rem;color:var(--grey-mid);line-height:1.4;font-family:'Oswald',sans-serif;letter-spacing:0.05em;text-transform:uppercase;}
+.area-wrap{background:var(--steel);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.area-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:1.25rem;}
+.area-tag{font-family:'Oswald',sans-serif;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey-light);background:var(--black);border:1px solid var(--border);padding:5px 12px;}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start;}
+.c-label{font-family:'Oswald',sans-serif;font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--red);display:block;margin-bottom:3px;}
+.c-val{font-family:'Oswald',sans-serif;font-weight:600;font-size:1.2rem;color:var(--white);text-decoration:none;transition:color .2s;display:block;margin-bottom:2px;}
+.c-val:hover{color:var(--grey-light);}
+.c-note{font-size:0.8rem;color:var(--grey-mid);}
+.c-item{margin-bottom:1.6rem;}
+.form-wrap{background:var(--steel);border:1px solid var(--border);padding:2rem;text-align:center;}
+.form-title{font-family:'Stardos Stencil',sans-serif;font-weight:700;font-size:1.2rem;text-transform:uppercase;color:var(--white);margin-bottom:.5rem;}
+.form-sub{font-size:0.88rem;color:var(--grey-light);margin-bottom:1.5rem;line-height:1.5;}
+.form-btn{display:block;width:100%;background:var(--red);color:#fff;font-family:'Oswald',sans-serif;font-weight:600;font-size:1rem;letter-spacing:0.15em;text-transform:uppercase;padding:15px;text-decoration:none;transition:opacity .2s;margin-bottom:.75rem;}
+.form-btn:hover{opacity:.85;}
+.form-alt{font-size:0.8rem;color:var(--grey-mid);}
+.form-alt a{color:var(--grey-light);text-decoration:none;}
+.form-alt a:hover{color:var(--white);}
+footer{background:var(--dark);border-top:1px solid var(--border);padding:1.75rem 1.5rem;text-align:center;}
+.foot-inner{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:.5rem;}
+.foot-inner img{height:28px;object-fit:contain;}
+.foot-brand{font-family:'Oswald',sans-serif;font-weight:600;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--grey-light);}
+.foot-copy{font-size:.7rem;color:var(--grey-mid);}
+@media(max-width:768px){
+  .nav-links{display:none;}
+  nav{padding:0 1rem;}
+  .stats{grid-template-columns:repeat(2,1fr);}
+  .pg-main{grid-template-columns:1fr;grid-template-rows:auto;}
+  .pg-main .tall{grid-row:span 1;height:260px;}
+  .pg-main img{height:220px;}
+  .pg-row img{height:180px;}
+  .pg-row{grid-template-columns:1fr 1fr;}
+  .svc-grid{grid-template-columns:1fr;}
+  .svc-card{border-right:none;border-bottom:1px solid var(--border);}
+  .about-grid,.contact-grid{grid-template-columns:1fr;gap:2.5rem;}
+  .about-creds{grid-template-columns:1fr 1fr;}
+  .wrap{padding:3rem 1.25rem;}
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.hero-location{animation:fadeUp .4s ease both;}
+.hero-logo{animation:fadeUp .4s .1s ease both;}
+.hero h1{animation:fadeUp .4s .18s ease both;}
+.hero-sub{animation:fadeUp .4s .26s ease both;}
+.hero-btns{animation:fadeUp .4s .34s ease both;}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#top" class="nav-left">
+    <img src="images/logo.png" alt="DG Equipment">
+    <div class="nav-brand">DG Equipment<br>Repair &amp; Services</div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="maintenance.html">Maintenance</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="tel:5163508898" class="nav-call">&#9742; (516) 350-8898</a>
+</nav>
+
+<div id="top" class="hero">
+  <div class="hero-location">Oceanside, NY &bull; South Shore Nassau County</div>
+  <img src="images/logo.png" alt="DG Equipment Repair" class="hero-logo">
+  <h1>We Come<br><span class="accent">To You</span></h1>
+  <p class="hero-sub">Mobile equipment repair for homeowners and contractors across Nassau County. No hauling. No shop. We show up and get it done.</p>
+  <div class="hero-btns">
+    <a href="tel:5163508898" class="btn-red">&#9742;&nbsp; Call (516) 350-8898</a>
+    <a href="https://ServiceRequest.dgequipmentrepair.com" target="_blank" class="btn-ghost">Request Service</a>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="stat-n">20<span>+</span></div><div class="stat-l">Years in the Trade</div></div>
+  <div class="stat"><div class="stat-n">5.0<span>★</span></div><div class="stat-l">Google Rating</div></div>
+  <div class="stat"><div class="stat-n">100<span>%</span></div><div class="stat-l">Mobile Service</div></div>
+  <div class="stat"><div class="stat-n">24<span>/7</span></div><div class="stat-l">Emergency Calls</div></div>
+</div>
+
+<div class="pg-main">
+  <img src="images/hero_truck.jpg" alt="DG Equipment truck on site" class="tall">
+  <img src="images/excavator_sky.jpg" alt="CASE excavator on job site">
+  <img src="images/cat_tarmac.jpg" alt="CAT excavator on tarmac">
+</div>
+
+<div class="svc-wrap" id="services">
+  <div class="wrap">
+    <span class="eyebrow">What We Fix</span>
+    <h2 class="sec-title">Services</h2>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <div class="svc-name">Outdoor Power Equipment</div>
+        <ul class="svc-list">
+          <li>Zero-turn &amp; walk-behind mowers</li>
+          <li>Riding mowers &amp; lawn tractors</li>
+          <li>Backpack &amp; handheld blowers</li>
+          <li>String trimmers &amp; edgers</li>
+          <li>Chain saws</li>
+          <li>Snow blowers</li>
+          <li>Power washers</li>
+          <li>Generators (portable &amp; standby)</li>
+          <li>Air compressors</li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <div class="svc-name">Medium &amp; Heavy Equipment</div>
+        <ul class="svc-list">
+          <li>Skid steers &amp; track loaders</li>
+          <li>Excavators &amp; dozers</li>
+          <li>Tractors &amp; telehandlers</li>
+          <li>Chippers &amp; grinders</li>
+          <li>Diesel engines</li>
+          <li>Hydraulic systems</li>
+          <li>Portable lighting &amp; compressors</li>
+          <li>Plate compactors</li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <div class="svc-name">Preventative Maintenance</div>
+        <ul class="svc-list">
+          <li>Oil &amp; filter service</li>
+          <li>Fuel &amp; air filter replacement</li>
+          <li>Spark plug service</li>
+          <li>Carburetor cleaning</li>
+          <li>Fuel system inspection</li>
+          <li>Belt &amp; drive inspection</li>
+          <li>Full operational test</li>
+          <li>Scheduled maintenance programs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="maint-callout">
+  <span class="eyebrow" style="display:block;margin-bottom:0.6rem;">For Commercial &amp; Institutional Clients</span>
+  <h2>Scheduled Maintenance Programs</h2>
+  <p>Monthly on-site service for facilities running multiple machines. We show up, handle everything, and leave a written report. No contract required.</p>
+  <a href="maintenance.html" class="btn-light">Learn More &rarr;</a>
+</div>
+
+<div class="emergency">
+  <h3>Equipment Down on the Job?</h3>
+  <p>We take emergency calls. If it's broken and you need it running today, call us directly.</p>
+  <a href="tel:5163508898" class="btn-white">&#9742; (516) 350-8898</a>
+</div>
+
+<div id="about">
+  <div class="wrap">
+    <span class="eyebrow">About</span>
+    <h2 class="sec-title">DG Equipment Repair &amp; Services</h2>
+    <p class="about-byline">Founded by <span>Danny Gustus</span></p>
+    <div class="about-grid">
+      <div class="about-img">
+        <img src="images/about_truck.jpg" alt="DG Equipment on site — Nassau County">
+      </div>
+      <div class="about-text">
+        <p>Founded in 2022, <strong>DG Equipment Repair &amp; Services</strong> is a mobile equipment repair operation based out of Oceanside, NY. With over 20 years of hands-on experience across gas, diesel, hydraulics, and small engines, we've worked on everything from residential lawn equipment to heavy commercial iron.</p>
+        <p>We built this business around one idea: <strong>your equipment gets fixed where it sits.</strong> No shop drop-offs, no waiting in line, no dealing with someone who's never seen your machine before. We come to you, get it done, and get out of your way.</p>
+        <p>We run fully stocked trucks so most repairs are finished in a single visit. We work with homeowners, landscapers, contractors, and facilities managers across Nassau County. No job too small, no machine too big.</p>
+        <div class="about-creds">
+          <div class="cred"><div class="cred-n">20<span style="font-size:1rem"> yrs</span></div><div class="cred-l">In the trade</div></div>
+          <div class="cred"><div class="cred-n">5.0 ★</div><div class="cred-l">Google rating</div></div>
+          <div class="cred"><div class="cred-n">100%</div><div class="cred-l">Mobile service</div></div>
+          <div class="cred"><div class="cred-n">24/7</div><div class="cred-l">Emergency calls</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pg-row">
+  <img src="images/dozer.jpg" alt="CAT D4G dozer">
+  <img src="images/takeuchi.jpg" alt="Takeuchi skid steer">
+  <img src="images/kobelco.jpg" alt="Kobelco excavator hydraulic repair">
+</div>
+
+<div class="area-wrap" id="area">
+  <div class="wrap">
+    <span class="eyebrow">Where We Work</span>
+    <h2 class="sec-title">Service Area</h2>
+    <p style="color:var(--grey-light);max-width:480px;margin-bottom:.25rem;font-size:.95rem;">South Shore of Nassau County. Not sure if we cover your area — just call.</p>
+    <div class="area-tags">
+      <span class="area-tag">Oceanside</span>
+      <span class="area-tag">Rockville Centre</span>
+      <span class="area-tag">Baldwin</span>
+      <span class="area-tag">Freeport</span>
+      <span class="area-tag">Long Beach</span>
+      <span class="area-tag">Island Park</span>
+      <span class="area-tag">Lynbrook</span>
+      <span class="area-tag">East Rockaway</span>
+      <span class="area-tag">Malverne</span>
+      <span class="area-tag">Valley Stream</span>
+      <span class="area-tag">Hewlett</span>
+      <span class="area-tag">Woodmere</span>
+      <span class="area-tag">Lawrence</span>
+      <span class="area-tag">Franklin Square</span>
+      <span class="area-tag">Elmont</span>
+      <span class="area-tag">West Hempstead</span>
+    </div>
+  </div>
+</div>
+
+<div id="contact">
+  <div class="wrap">
+    <span class="eyebrow">Get In Touch</span>
+    <h2 class="sec-title">Contact</h2>
+    <div class="contact-grid">
+      <div>
+        <div class="c-item">
+          <span class="c-label">Phone &amp; Text</span>
+          <a href="tel:5163508898" class="c-val">(516) 350-8898</a>
+          <div class="c-note">Call or text — fastest way to reach us.</div>
+        </div>
+        <div class="c-item">
+          <span class="c-label">Email</span>
+          <a href="mailto:dgequipmentservices@gmail.com" class="c-val" style="font-size:1rem;">dgequipmentservices@gmail.com</a>
+          <div class="c-note">We'll get back to you same day.</div>
+        </div>
+        <div class="c-item">
+          <span class="c-label">Hours</span>
+          <span class="c-val" style="font-size:1rem;">Mon &ndash; Fri &nbsp;7AM &ndash; 6PM</span>
+          <div class="c-note">Emergency service available 24/7 — just call.</div>
+        </div>
+        <div class="c-item">
+          <span class="c-label">Based In</span>
+          <span class="c-val" style="font-size:1rem;">Oceanside, NY 11572</span>
+          <div class="c-note">100% mobile — we come to your location.</div>
+        </div>
+      </div>
+      <div>
+        <div class="form-wrap">
+          <div class="form-title">Request Service</div>
+          <div class="form-sub">Fill out a quick request and we'll get back to you same day.</div>
+          <a href="https://ServiceRequest.dgequipmentrepair.com" target="_blank" class="form-btn">Fill Out Service Request &rarr;</a>
+          <div class="form-alt">Or call/text &mdash; <a href="tel:5163508898">(516) 350-8898</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <img src="images/logo.png" alt="DG Equipment">
+    <div class="foot-brand">DG Equipment Repair &amp; Services, LLC &mdash; Oceanside, NY</div>
+  </div>
+  <div class="foot-copy">&copy; 2026 DG Equipment Repair &amp; Services, LLC &mdash; All Rights Reserved</div>
+</footer>
+
+</body>
+</html>
