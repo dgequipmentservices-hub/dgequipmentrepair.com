@@ -8,6 +8,8 @@
 
 .dg-lockup{display:inline-flex;align-items:center;text-decoration:none;color:var(--white);}
 .dg-lockup .divider{background:var(--red);align-self:stretch;}
+/* small '& Services' line under the name */
+.dg-lockup .words small{display:block;font-family:'Oswald',sans-serif;font-weight:500;font-size:.42em;letter-spacing:.22em;color:var(--grey-light);margin-top:.35em;}
 .dg-lockup .words{font-family:'Stardos Stencil',serif;font-weight:700;text-transform:uppercase;line-height:1.02;letter-spacing:.03em;}
 
 /* ---- Nav ---- */
@@ -17,6 +19,7 @@
 .site-nav .dg-mark .bar{height:4px;margin-top:3px;}
 .site-nav .divider{width:2px;margin:6px 0;}
 .site-nav .words{font-size:12.5px;}
+.site-nav .words small{font-size:.62em;letter-spacing:.16em;margin-top:2px;}
 .nav-links{display:flex;list-style:none;margin:0 0 0 auto;padding:0;align-items:center;}
 .nav-links a{font-family:'Oswald',sans-serif;font-weight:500;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--grey-light);text-decoration:none;padding:0 .8rem;line-height:62px;display:block;transition:color .2s;white-space:nowrap;}
 .nav-links a:hover,.nav-links a.active{color:var(--white);}
